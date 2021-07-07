@@ -1,0 +1,29 @@
+---
+# Documentation: https://cmake-format.readthedocs.io/en/latest/configuration.html.
+format:
+  line_width: 100
+  tab_size: 4
+  max_subgroups_hwrap: 100000
+  max_pargs_hwrap: 100000
+  max_rows_cmdline: 0
+  max_lines_hwrap: 0
+  dangle_parens: true
+  autosort: true
+  layout_passes:
+    # Align function by first argument
+    StatementNode: # See: https://github.com/cheshirekow/cmake_format/issues/213
+      - [0, false]
+      - [5, false]
+    # Nest commands arguments when needed
+    KwargGroupNode: # See: https://github.com/cheshirekow/cmake_format/issues/206
+      - [0, false]
+      - [4, true]
+      - [5, true]
+    # Nest commands arguments when needed (Alternative)
+    # PargGroupNode: # See: https://github.com/cheshirekow/cmake_format/issues/206
+    #   - [0, false]
+    #   - [5, true]
+    # Always nest commands arguments
+    # KwargGroupNode: # See: https://github.com/cheshirekow/cmake_format/issues/206
+    #   - [0, true]
+    #   - [5, true]
